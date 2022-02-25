@@ -1,0 +1,19 @@
+{
+  "name": "practica1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startDev": "nodemon app.js",
+    "lint": "standard"
+  },
+  "author": "Jorge Briseño",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4"
+  }
+}
