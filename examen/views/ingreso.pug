@@ -1,0 +1,29 @@
+hmtl
+    head
+        link(rel="stylesheet" href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="https://getbootstrap.com/docs/5.0/examples/sign-in/signin.css")
+        title Ingreso con credenciales
+    body
+        div
+            h1 Ingreso con correo #{correo} y tiene una contraseña #{password}
+
+
+
+    div
+        form(action="/registro" method="get")
+            button(class="w-100 btn btn-lg btn-danger" type="submit" name="registro") Registro de usuarios
+    br
+
+
+    div 
+        form(action="/alta" method="get")
+            button(class="w-100 btn btn-lg btn-success" type="submit" name="alta") Alta de peliculas
+    br
+
+    div 
+        form(action="/guardadas" method="get")
+            button(class="w-100 btn btn-lg btn-warning" type="submit" name="guardado") Peliculas registradas
+
+    div 
+        form(action="/" method="/get")
+            button(class="w-100 btn btn-lg btn-secundary" type="submit" name="back") Regresar

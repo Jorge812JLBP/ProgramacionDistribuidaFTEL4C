@@ -1,0 +1,34 @@
+html
+    head
+        title Alta de peliculas
+        link(rel="stylesheet" href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="https://getbootstrap.com/docs/5.0/examples/sign-in/signin.css")
+        meta(name="theme-color" content="#7952b3")
+    body(class="text-center" anx="4C")
+    main(class="form-signin")
+        form(action="/altapeliculas" method="post")
+          
+            h1(class="h3 mb-3 fw-normal") Registro de peliculas
+            div(class="form-floating")
+                input(
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="Titulo"
+                    name="titulo")
+                label Titulo
+            div(class="form-floating")
+                input(
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="Descripcion"
+                    name="descripcion")
+                label Descripcion
+            div(class="form-floating")
+                input(type="text" class="form-control" id="floatingFecha" placeholder="Fecha de estreno" name="fecha")
+                label Fecha de estreno
+            button(class="w-100 btn btn-lg btn-primary" type="submit" name="alta") Registrarla
+            div 
+             form(action="/ingreso" method="/")
+                button(class="w-100 btn btn-lg btn-secundary" type="submit" name="back") Regresar
