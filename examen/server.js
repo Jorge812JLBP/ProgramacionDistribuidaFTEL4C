@@ -23,7 +23,11 @@ app.get('/alta', function(req,res){
 })
 
 app.get('/guardadas',function(req,res){
-    res.render('guardadas')
+    connection.query('SELECT * FROM peliculas' ,function(err, result, fields){
+        console.log(result[1] ['titulo'], result[1]['descripcion'], result[1]['fechaestreno'])
+            res.render('guardadas',{data:result})
+
+    })
 })
 
 app.get('/404', function(req, res) {
@@ -58,6 +62,7 @@ app.post('/altapeliculas', function(req, res) {
        }
 });
 
+/*
 app.post('/altapelis', function(req, res){
     connection.query('SELECT * FROM peliculas' ,function(err, result, fields){
             
@@ -66,6 +71,7 @@ app.post('/altapelis', function(req, res){
         
     })
 });
+*/
 
 
 app.post('/auth', function(req, res) {
